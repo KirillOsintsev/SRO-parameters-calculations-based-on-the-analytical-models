@@ -37,8 +37,9 @@ The simulation iterates through a predefined list of temperatures to calculate s
 
 **How to Modify**: The temperature points are hardcoded in the main() function within main.py. To change the range or add specific temperature steps, locate the temperatures list and update it:
 
-# main.py
 ```
+# main.py
+
 def main():
     # Modify this list to change the temperature range
     temperatures = [300, 400, 500, ..., 2000]

@@ -85,7 +85,7 @@ The system creates a hierarchical directory structure:
 ```
 {alloy_name}/
 ├── {pair_name}/          # For each unique element pair (e.g., CrFe, CrNi, FeNi)
-    └── {nn}/             # For each nearest neighbor shell (1st, 2nd, 3rd, 4th)
+    └── {nn}/             # For each nearest neighbor shell (1st, 2nd)
         ├── calculate_{nn}_S-S_interaction_by_pressure_relaxation.py
         └── run_calculation_{nn}.sh
 ```

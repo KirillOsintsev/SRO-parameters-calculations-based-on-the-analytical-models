@@ -94,7 +94,7 @@ The system creates a hierarchical directory structure:
 
 For each pair and nearest neighbor shell, the system:
 1. **Generates Python scripts**: Creates LAMMPS calculation scripts for solute-solute interactions
-2. **Generates shell scripts**: Creates bash scripts to execute calculations for all pair combinations (11, 12, 22)
+2. **Generates shell scripts**: Creates bash scripts to execute calculations for all pair combinations
 3. **Executes calculations**: Runs LAMMPS simulations via subprocess calls
 4. **Extracts results**: Parses log files to extract interaction energies
 
@@ -122,10 +122,8 @@ commonly used in solute-strengthening models, e.g. Varvenne et al. (2016), DOI: 
 
 The `calculate_sro_parameters` module:
 - **Fugacity calculation**: Computes temperature-dependent fugacity values from EPIs
-- **SRO parameter calculation**: Determines Warren-Cowley SRO parameters (α_nm) for each pair and shell:
-  - Binary systems: Direct calculation from fugacity
-  - Ternary systems: Matrix solution for coupled equations
-  - Quaternary/Quinary systems: Extended matrix formulations
+- **SRO parameter calculation**: Determines Warren-Cowley SRO parameters (α_nm) for each pair and shell based on the analytical models derived in the Y.Rao and W.Curtin's article (DOI: 10.1016/j.actamat.2022.117621). Currently supports prediction of the SRO parameters only for the 1st coordination shell for the binary, ternary, quaternary and quinary systems using pair models. 
+  
 - **Temperature dependence**: Calculates SRO parameters across the specified temperature range
 - Saves results to `{alloy_name}_sro_results.json` and `{alloy_name}_fugacity_results.txt`
 

@@ -7,7 +7,7 @@ This computational framework performs calculation of the Short-Range Order (SRO)
 ## Usage
 1. Ensure input files exist:
    - `data/input/database.json`
-   - 'data/input/{name-of-your-excel-file}.xls # Note: only .xls file format is currently supported
+   - `data/input/{name-of-your-excel-file}.xls` # Note: only .xls file format is currently supported
    - EAM potential in `data/input/potentials/eam/`
 2. Run the interactive CLI:
 

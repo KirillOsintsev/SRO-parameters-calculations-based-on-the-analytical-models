@@ -245,7 +245,7 @@ Aggregated results for all alloys in the system.
 
 ## Key Functions
 
-### Main Functions (`main_screening.py`)
+### Main Functions (`main.py`)
 
 - `process_composition()`: Orchestrates the complete calculation pipeline for a single composition
 - `main()`: User interface and batch processing coordinator
@@ -303,11 +303,9 @@ EPIs (V_nm) represent the energy difference between mixed and separated pairs:
 ## Authors & Contributions (code)
 
 - **Osintsev Kirill (Wenzhou university)**
-  - Implemented core pipeline modules including misfit volume calculation (`calculators/calculate_misfit_volume.py`),
-    normalized SRO parameters (`calculators/normalized_sro_parameters.py`),
-    and SRO calculations (`calculators/calculate_sro_parameters.py`).
+  - Implemented core pipeline modules.
 - **Xin Liu (EPFL)** — `xin.liu@epfl.ch`
-  - Credited in the generated run-script template used by `utils/generate_calculation_files.py` (shell script header).
+  - Implemented run-script template used by `utils/generate_calculation_files.py`.
 
 ## Third-party Code & Licenses
 
@@ -329,8 +327,3 @@ Key papers referenced by the implementation:
 - Rao, Y., Curtin, W. A. (2022), *Analytical models of short-range order in FCC and BCC alloys*, Acta Materialia 226, 117621. DOI: `10.1016/j.actamat.2022.117621`
 - Nag, S. and Curtin, W. A. (2024), *Solute-strengthening in metal alloys with short-range order*, Acta Materialia 263, 119472. DOI: `10.1016/j.actamat.2023.119472`
 - Varvenne, C., Luque, A., Curtin, W. A. (2016), *Theory of strengthening in fcc high entropy alloys*, Acta Materialia 118, 164–176. DOI: `10.1016/j.actamat.2016.07.040`
-
----
-
-**Version**: 1.0  
-**Last Updated**: January 2025

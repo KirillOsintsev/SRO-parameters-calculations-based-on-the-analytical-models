@@ -245,7 +245,7 @@ pip install -r requirements.txt
 
 ### External Software
 - **LAMMPS**: Molecular dynamics simulator (https://www.lammps.org/)
-- **mpi4py**: Parallel execution support (optional, used by generated scripts)
+- **mpi4py**: Parallel execution support (used by generated scripts)
 
 ### Data Requirements
 - **EAM Potentials**: Embedded Atom Method potential files in LAMMPS format

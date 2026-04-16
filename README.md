@@ -4,11 +4,51 @@
 
 This computational framework performs systematic screening of multi-component alloy compositions to calculate and analyze Short-Range Order (SRO) parameters, Effective Pair Interactions (EPIs), misfit volumes, and normalized SRO parameters. The system integrates molecular dynamics simulations (via LAMMPS) with statistical thermodynamics to predict ordering behavior in complex alloys across a range of temperatures.
 
+## Implementation
+Open terminal and run
+```
+python main.py
+```
+The command line interface will be run. 
+
+### Interacting with the CLI
+
+Once the script starts, you will be prompted to provide the following information step-by-step:
+
+Operation Mode: Choose whether to perform a fresh simulation or load cached data.
+
+1: Calculate new — Runs the full SRO parameter simulation.
+
+2: Load from existing files — Processes data from previously generated results in the ./data/output/ directory.
+
+**Alloy System**: Enter the name of the system (e.g., FeCrNi). This name is used to organize output folders.
+
+**Phase & Structure**: Follow the prompts to specify the crystallographic phase (suppors only FCC or BCC), nearest neighbors (NN) list (only 1st NN is supported now), and the number of cells for the simulation (5 is used by default).
+
+**Lattice Constant (New Calculation only)**: Provide the lattice constant (in Å) to be applied across all compositions.
+
+**Composition Input**: The script will attempt to load specific alloy compositions from an Excel file. Copy and paste the link to your .xls file in the command line. An example of the .xls file is presented in the 
+
+**Configuration**: Temperature Range
+
+The simulation iterates through a predefined list of temperatures to calculate short-range order parameters.
+
+Default Range: 300 K to 2000 K (including specific points like 773 K and 1273 K).
+
+How to Modify: The temperature points are hardcoded in the main() function within main.py. To change the range or add specific temperature steps, locate the temperatures list and update it:
+
+# main.py
+```
+def main():
+    # Modify this list to change the temperature range
+    temperatures = [300, 400, 500, ..., 2000]
+```
+
 ## Project Structure
 
 ```
 Project/
-├── main_screening.py                   # Main execution script (interactive CLI)
+├── main.py                   # Main execution script (interactive CLI)
 ├── calculators/                        # Core calculation modules
 │   ├── __init__.py
 │   ├── EPI_calculator.py               # Effective Pair Interaction (EPI) calculations

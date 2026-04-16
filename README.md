@@ -1,4 +1,4 @@
-# Alloy Screening System for Short-Range Order (SRO) Parameter Calculation
+# Calculator of Short-Range Order (SRO) Parameters based on the analytical models
 
 ## Overview
 
@@ -130,7 +130,7 @@ The `calculate_sro_parameters` module:
 
 ### 8. Normalized SRO Parameters
 
-The `normalized_sro_parameters` module:
+The `normalized_sro_parameters` module is based on the solute strengthening theory for alloys with SRO developed by S.Nag and W. Curtin DOI: '10.1016/j.actamat.2023.119472':
 - **Beta calculation**: Computes normalized SRO parameters (β_i) incorporating misfit volumes:
   ```
   β_i = Σ_n,m c_n × c_m × (ΔV_n - ΔV_m)² × α_nm^(i)
@@ -156,7 +156,7 @@ The system generates comprehensive reports:
 ### Basic Execution
 
 ```bash
-python main_screening.py
+python main.py
 ```
 
 ### Interactive Workflow
@@ -286,7 +286,7 @@ EPIs (V_nm) represent the energy difference between mixed and separated pairs:
 
 ## Authors & Contributions (code)
 
-- **osintsevkirill**
+- **Osintsev Kirill (Wenzhou university)**
   - Implemented core pipeline modules including misfit volume calculation (`calculators/calculate_misfit_volume.py`),
     normalized SRO parameters (`calculators/normalized_sro_parameters.py`),
     and SRO calculations (`calculators/calculate_sro_parameters.py`).

@@ -187,7 +187,7 @@ The `normalized_sro_parameters` module is based on the solute strengthening theo
 The system generates comprehensive reports:
 - **Individual alloy reports**: Detailed results for each composition
 - **Summary report**: Aggregated results across all alloys in the system (`all_alloys_normalized_sro_report.txt`)
-- Reports include normalized SRO parameters, condition satisfaction flags, and temperature-dependent behavior
+- Reports include normalized SRO parameters at the specified temperature range.
 
 
 ### Output Files

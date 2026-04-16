@@ -2,7 +2,7 @@
 
 ## Overview
 
-This computational framework performs systematic screening of multi-component alloy compositions to calculate and analyze Short-Range Order (SRO) parameters, Effective Pair Interactions (EPIs), misfit volumes, and normalized SRO parameters. The system integrates molecular dynamics simulations (via LAMMPS) with statistical thermodynamics to predict ordering behavior in complex alloys across a range of temperatures.
+This computational framework performs calculation of the Short-Range Order (SRO) parameters, Effective Pair Interactions (EPIs), misfit volumes, and normalized SRO parameters in systems composed of 2-6 elements. The framework integrates molecular dynamics simulations (via LAMMPS) with statistical thermodynamics to predict ordering behavior in complex alloys across a range of temperatures.
 
 ## Usage
 1. Ensure input files exist:
@@ -11,15 +11,11 @@ This computational framework performs systematic screening of multi-component al
    - EAM potential in `data/input/potentials/eam/`
 2. Run the interactive CLI:
 
-```bash
-python main_screening.py
-```
-
 Open terminal and run
 ```
 python main.py
 ```
-The command line interface will be run. 
+The command line interface (CLI) will be run. 
 
 ### Interacting with the CLI
 
@@ -45,7 +41,7 @@ Once the script starts, you will be prompted to provide the following informatio
 
 **Configuration**: Temperature Range
 
-The simulation iterates through a predefined list of temperatures to calculate short-range order parameters.
+The simulation iterates through a predefined list of temperatures to calculate short-range order parameters which can be manufally changed.
 
 **Default Range**: 300 K to 2000 K (including specific points like 773 K and 1273 K).
 
@@ -210,6 +206,9 @@ Effective pair interaction energies for each shell and pair combination.
 #### Misfit Volumes (`{alloy_name}_misfit_volumes_results.txt`)
 Misfit volumes for each element in the alloy.
 
+#### Pair Probabilities (`{alloy_name}_pair_probabilities.json`)
+Temperature-dependent pair probabilities for all pairs and shells used in SRO calculations.
+
 #### SRO Parameters (`{alloy_name}_sro_results.json`)
 Temperature-dependent Warren-Cowley SRO parameters (α_nm) for all pairs and shells.
 
@@ -220,7 +219,7 @@ Temperature-dependent fugacity values used in SRO calculations.
 Normalized SRO parameters (β_i/β_0) and phase-specific averages.
 
 #### Summary Report (`all_alloys_normalized_sro_report.txt`)
-Aggregated results for all alloys in the system with condition satisfaction indicators.
+Aggregated results for all alloys in the system.
 
 ## Dependencies
 
@@ -237,7 +236,7 @@ Aggregated results for all alloys in the system with condition satisfaction indi
 - Recommended: **Python 3.8+** (SciPy/matplotlib compatibility).
 
 ### External Software
-- **LAMMPS**: Molecular dynamics simulator (required for calculations)
+- **LAMMPS**: Molecular dynamics simulator (https://www.lammps.org/)
 - **mpi4py**: Parallel execution support (optional, used by generated scripts)
 
 ### Data Requirements

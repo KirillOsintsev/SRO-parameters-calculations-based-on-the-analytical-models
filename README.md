@@ -36,6 +36,7 @@ Project/
                     ├── {alloy_name}.json              # Configuration file
                     ├── {alloy_name}_epi_results.txt   # EPI results
                     ├── {alloy_name}_misfit_volumes_results.txt # Misfit volumes
+                    |── {alloy_name}_pair_probabilities.json  # Pair probabilities
                     ├── {alloy_name}_sro_results.json  # SRO parameters
                     ├── {alloy_name}_fugacity_results.txt # Fugacity values
                     ├── {alloy_name}_normalized_sro_parameters.txt # Normalized SRO

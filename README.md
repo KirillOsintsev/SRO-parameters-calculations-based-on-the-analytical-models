@@ -271,7 +271,7 @@ Aggregated results for all alloys in the system.
 
 ### Short-Range Order (SRO)
 
-SRO parameters (α_nm) quantify the deviation from random mixing:
+Warren-Cowley SRO parameters (α_nm) quantify the deviation from random mixing:
 - α_nm = 0: Random distribution
 - α_nm > 0: Clustering tendency
 - α_nm < 0: Ordering tendency

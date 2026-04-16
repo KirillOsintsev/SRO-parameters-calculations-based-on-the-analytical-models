@@ -2,7 +2,7 @@
 
 ## Overview
 
-This computational framework performs calculation of the Short-Range Order (SRO) parameters, Effective Pair Interactions (EPIs), misfit volumes, and normalized SRO parameters in systems composed of 2-6 elements. The framework integrates molecular dynamics simulations (via LAMMPS) with statistical thermodynamics to predict ordering behavior in complex alloys across a range of temperatures.
+This computational framework performs calculation of the Short-Range Order (SRO) parameters, Effective Pair Interactions (EPIs), misfit volumes, and normalized SRO parameters in the metallic systems composed of 2-6 elements. The framework integrates molecular dynamics simulations (via LAMMPS) with statistical thermodynamics to predict ordering behavior in complex alloys across a range of temperatures.
 
 ## Usage
 1. Ensure input files exist:

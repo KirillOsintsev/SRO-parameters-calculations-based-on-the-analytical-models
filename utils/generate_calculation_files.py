@@ -12,17 +12,17 @@ set -o nounset # Treat unset variables as an error
 
 python3 \\
     calculate_{nn}_S-S_interaction_by_pressure_relaxation.py \\
-    /media/sf_host/Project/data/input/potentials/average_potentials/{alloy_name}.averaged.eam.alloy \\
+    ../../../../../../data/input/potentials/average_potentials/{alloy_name}.averaged.eam.alloy \\
     X {element1} {element2} {ncells} {lattice_constant} {potential_style} > log12.txt
 
 python3 \\
     calculate_{nn}_S-S_interaction_by_pressure_relaxation.py \\
-    /media/sf_host/Project/data/input/potentials/average_potentials/{alloy_name}.averaged.eam.alloy \\
+    ../../../../../../data/input/potentials/average_potentials/{alloy_name}.averaged.eam.alloy \\
     X {element1} {element1} {ncells} {lattice_constant} {potential_style} > log11.txt
 
 python3 \\
     calculate_{nn}_S-S_interaction_by_pressure_relaxation.py \\
-    /media/sf_host/Project/data/input/potentials/average_potentials/{alloy_name}.averaged.eam.alloy \\
+    ../../../../../../data/input/potentials/average_potentials/{alloy_name}.averaged.eam.alloy \\
     X {element2} {element2} {ncells} {lattice_constant} {potential_style} > log22.txt
 '''
 

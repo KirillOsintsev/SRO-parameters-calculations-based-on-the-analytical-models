@@ -1,0 +1,1 @@
+Find lattice parameter at zero pressure in configuration with solute

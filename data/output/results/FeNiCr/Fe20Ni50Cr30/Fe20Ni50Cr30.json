@@ -1,0 +1,40 @@
+{
+    "alloy_name": "Fe20Ni50Cr30",
+    "composition": {
+        "Fe": 20,
+        "Ni": 50,
+        "Cr": 30
+    },
+    "concentrations": [
+        0.2,
+        0.5,
+        0.3
+    ],
+    "components": [
+        "Fe",
+        "Ni",
+        "Cr"
+    ],
+    "number_of_components": 3,
+    "pairs": [
+        [
+            "Cr",
+            "Fe"
+        ],
+        [
+            "Cr",
+            "Ni"
+        ],
+        [
+            "Fe",
+            "Ni"
+        ]
+    ],
+    "nearest_neighbors": [
+        "1st"
+    ],
+    "lattice_constant": 3.52,
+    "ncells": 5,
+    "phase": "fcc",
+    "potential_style": "eam/alloy"
+}

@@ -1,0 +1,12 @@
+LAMMPS (29 Aug 2024 - Update 1)
+OMP_NUM_THREADS environment is not set. Defaulting to 1 thread. (src/comm.cpp:98)
+  using 1 OpenMP thread(s) per MPI task
+Lattice spacing in x,y,z = 3.344 3.344 3.344
+Created orthogonal box = (0 0 0) to (16.72 16.72 16.72)
+  1 by 1 by 1 MPI processor grid
+Created 500 atoms
+  using lattice units in orthogonal box = (0 0 0) to (16.72 16.72 16.72)
+  create_atoms CPU = 0.000 seconds
+ERROR on proc 0: cannot open eam/alloy potential file /media/sf_host/Project/data/input/potentials/average_potentials/Fe34Ni33Cr33.averaged.eam.alloy: No such file or directory (src/potential_file_reader.cpp:58)
+Last command: pair_coeff      * * /media/sf_host/Project/data/input/potentials/average_potentials/Fe34Ni33Cr33.averaged.eam.alloy X Fe Fe
+Total wall time: 0:00:00

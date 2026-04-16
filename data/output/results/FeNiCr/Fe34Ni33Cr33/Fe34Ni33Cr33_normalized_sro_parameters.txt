@@ -1,0 +1,76 @@
+Temperature 300 K
+beta_average/beta_0: 0.0
+beta_1/beta_0: -0.05050682159820898
+
+Temperature 400 K
+beta_average/beta_0: 0.0
+beta_1/beta_0: -0.03747995394641044
+
+Temperature 500 K
+beta_average/beta_0: 0.0
+beta_1/beta_0: -0.02978080743808539
+
+Temperature 600 K
+beta_average/beta_0: 0.0
+beta_1/beta_0: -0.024700681859168044
+
+Temperature 700 K
+beta_average/beta_0: 0.0
+beta_1/beta_0: -0.021099013588301508
+
+Temperature 773 K
+beta_average/beta_0: 0.0
+beta_1/beta_0: -0.01906849947944679
+
+Temperature 800 K
+beta_average/beta_0: 0.0
+beta_1/beta_0: -0.018412982515756886
+
+Temperature 900 K
+beta_average/beta_0: 0.0
+beta_1/beta_0: -0.01633306608966972
+
+Temperature 1000 K
+beta_average/beta_0: 0.0
+beta_1/beta_0: -0.01467503713213129
+
+Temperature 1100 K
+beta_average/beta_0: 0.0
+beta_1/beta_0: -0.01332242164000057
+
+Temperature 1200 K
+beta_average/beta_0: 0.0
+beta_1/beta_0: -0.012197989691046076
+
+Temperature 1273 K
+beta_average/beta_0: 0.0
+beta_1/beta_0: -0.011489998925582291
+
+Temperature 1400 K
+beta_average/beta_0: 0.0
+beta_1/beta_0: -0.010436120564090474
+
+Temperature 1500 K
+beta_average/beta_0: 0.0
+beta_1/beta_0: -0.009733132680432022
+
+Temperature 1600 K
+beta_average/beta_0: 0.0
+beta_1/beta_0: -0.009118849297826635
+
+Temperature 1700 K
+beta_average/beta_0: 0.0
+beta_1/beta_0: -0.00857748152023311
+
+Temperature 1800 K
+beta_average/beta_0: 0.0
+beta_1/beta_0: -0.00809677689035941
+
+Temperature 1900 K
+beta_average/beta_0: 0.0
+beta_1/beta_0: -0.007667081954132738
+
+Temperature 2000 K
+beta_average/beta_0: 0.0
+beta_1/beta_0: -0.007280687955506054
+

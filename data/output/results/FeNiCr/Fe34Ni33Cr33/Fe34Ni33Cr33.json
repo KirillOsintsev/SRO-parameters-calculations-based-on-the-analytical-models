@@ -1,0 +1,40 @@
+{
+    "alloy_name": "Fe34Ni33Cr33",
+    "composition": {
+        "Fe": 34,
+        "Ni": 33,
+        "Cr": 33
+    },
+    "concentrations": [
+        0.34,
+        0.33,
+        0.33
+    ],
+    "components": [
+        "Fe",
+        "Ni",
+        "Cr"
+    ],
+    "number_of_components": 3,
+    "pairs": [
+        [
+            "Cr",
+            "Fe"
+        ],
+        [
+            "Cr",
+            "Ni"
+        ],
+        [
+            "Fe",
+            "Ni"
+        ]
+    ],
+    "nearest_neighbors": [
+        "1st"
+    ],
+    "lattice_constant": 3.52,
+    "ncells": 5,
+    "phase": "fcc",
+    "potential_style": "eam/alloy"
+}

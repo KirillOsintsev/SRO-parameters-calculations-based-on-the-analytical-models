@@ -1,0 +1,10 @@
+Alloy Composition:
+Fe: 0.34
+Ni: 0.33
+Cr: 0.33
+Average volume: 11.770
+
+Element	Misfit Volume (Angstroem^3)
+Fe	0.320100
+Ni	-0.829900
+Cr	0.500100

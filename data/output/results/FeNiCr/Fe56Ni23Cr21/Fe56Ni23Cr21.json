@@ -1,0 +1,41 @@
+{
+    "alloy_name": "Fe56Ni23Cr21",
+    "composition": {
+        "Fe": 56,
+        "Ni": 23,
+        "Cr": 21
+    },
+    "concentrations": [
+        0.56,
+        0.23,
+        0.21
+    ],
+    "components": [
+        "Fe",
+        "Ni",
+        "Cr"
+    ],
+    "number_of_components": 3,
+    "pairs": [
+        [
+            "Cr",
+            "Fe"
+        ],
+        [
+            "Cr",
+            "Ni"
+        ],
+        [
+            "Fe",
+            "Ni"
+        ]
+    ],
+    "nearest_neighbors": [
+        "1st",
+        "2nd"
+    ],
+    "lattice_constant": 3.52,
+    "ncells": 5,
+    "phase": "fcc",
+    "potential_style": "eam/alloy"
+}

@@ -27,15 +27,15 @@ Operation Mode: Choose whether to perform a fresh simulation or load cached data
 
 **Lattice Constant (New Calculation only)**: Provide the lattice constant (in Å) to be applied across all compositions.
 
-**Composition Input**: The script will attempt to load specific alloy compositions from an Excel file. Copy and paste the link to your .xls file in the command line. An example of the .xls file is presented in the 
+**Composition Input**: The script will attempt to load specific alloy compositions from an Excel file. Copy and paste the link to your .xls file in the command line. An example of the .xls file is provided in the ./data/input/FeNiCr.xls. The script supports consequent run for the multiple alloy systems written in the first column of the .xls file.
 
 **Configuration**: Temperature Range
 
 The simulation iterates through a predefined list of temperatures to calculate short-range order parameters.
 
-Default Range: 300 K to 2000 K (including specific points like 773 K and 1273 K).
+**Default Range**: 300 K to 2000 K (including specific points like 773 K and 1273 K).
 
-How to Modify: The temperature points are hardcoded in the main() function within main.py. To change the range or add specific temperature steps, locate the temperatures list and update it:
+**How to Modify**: The temperature points are hardcoded in the main() function within main.py. To change the range or add specific temperature steps, locate the temperatures list and update it:
 
 # main.py
 ```

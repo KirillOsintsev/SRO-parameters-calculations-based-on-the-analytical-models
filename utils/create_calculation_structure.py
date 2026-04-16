@@ -12,7 +12,7 @@ def get_user_input_nearest_neighbors():
     """Ask user how many nearest neighbors to calculate (1-4)."""
     while True:
         try:
-            n = int(input("How many nearest neighbors to calculate? (1-4): "))
+            n = int(input("How many nearest neighbors to calculate? (1 is currently available): "))
             if 1 <= n <= 4:
                 return [f"{i}st" if i == 1 else f"{i}nd" if i == 2 else f"{i}rd" if i == 3 else f"{i}th" 
                        for i in range(1, n + 1)]

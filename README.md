@@ -231,6 +231,14 @@ Aggregated results for all alloys in the system.
 - `subprocess`: LAMMPS execution
 - `matplotlib`: Visualization (optional)
 - `scipy`: Optimization routines (SRO solving; also used in generated scripts)
+- `mpi4py`: MPI bindings for Python (used by generated LAMMPS scripts)
+- `lammps`: Python interface to LAMMPS (needed by generated scripts)
+
+Install the Python dependencies in the same environment used to run this project:
+
+```bash
+pip install -r requirements.txt
+```
 
 ### Python Version
 - Recommended: **Python 3.8+** (SciPy/matplotlib compatibility).

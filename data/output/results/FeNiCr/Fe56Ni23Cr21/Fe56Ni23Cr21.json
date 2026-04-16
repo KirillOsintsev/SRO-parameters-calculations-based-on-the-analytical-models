@@ -31,11 +31,11 @@
         ]
     ],
     "nearest_neighbors": [
-        "1st",
-        "2nd"
+        "1st"
     ],
     "lattice_constant": 3.52,
     "ncells": 5,
     "phase": "fcc",
-    "potential_style": "eam/alloy"
+    "potential_style": "eam/alloy",
+    "averaged_potential_path": "/media/sf_host/SRO-parameters-calculator/data/input/potentials/average_potentials/Fe56Ni23Cr21.averaged.eam.alloy"
 }

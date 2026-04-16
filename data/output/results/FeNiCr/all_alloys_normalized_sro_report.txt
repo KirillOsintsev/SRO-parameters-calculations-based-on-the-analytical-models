@@ -126,6 +126,67 @@ Normalized SRO Parameters:
     beta_average/beta_0: 0.00000000000000000
     beta_1/beta_0: -0.00728068795550605
 
+Alloy: Fe56Ni23Cr21
+Composition: {'Fe': 56, 'Ni': 23, 'Cr': 21}
+Normalized SRO Parameters:
+  Temperature 300 K:
+    beta_average/beta_0: -0.33568862083082762
+    beta_1/beta_0: -0.33731127833505997
+  Temperature 400 K:
+    beta_average/beta_0: -0.33568874108442454
+    beta_1/beta_0: -0.33731140056794945
+  Temperature 500 K:
+    beta_average/beta_0: -0.33568881639349807
+    beta_1/beta_0: -0.33731147706189168
+  Temperature 600 K:
+    beta_average/beta_0: -0.33568886769032308
+    beta_1/beta_0: -0.33731152915512996
+  Temperature 700 K:
+    beta_average/beta_0: -0.33568890518435662
+    beta_1/beta_0: -0.33731156721828792
+  Temperature 773 K:
+    beta_average/beta_0: -0.33568892661476840
+    beta_1/beta_0: -0.33731158897113878
+  Temperature 800 K:
+    beta_average/beta_0: -0.33568893363088620
+    beta_1/beta_0: -0.33731159608913519
+  Temperature 900 K:
+    beta_average/beta_0: -0.33568895596893844
+    beta_1/beta_0: -0.33731161876099858
+  Temperature 1000 K:
+    beta_average/beta_0: -0.33568897408924997
+    beta_1/beta_0: -0.33731163714896534
+  Temperature 1100 K:
+    beta_average/beta_0: -0.33568898904960054
+    beta_1/beta_0: -0.33731165232587385
+  Temperature 1200 K:
+    beta_average/beta_0: -0.33568900136395718
+    beta_1/beta_0: -0.33731166481979596
+  Temperature 1273 K:
+    beta_average/beta_0: -0.33568900938562579
+    beta_1/beta_0: -0.33731167295596093
+  Temperature 1400 K:
+    beta_average/beta_0: -0.33568902125384259
+    beta_1/beta_0: -0.33731168499312891
+  Temperature 1500 K:
+    beta_average/beta_0: -0.33568902921294785
+    beta_1/beta_0: -0.33731169305723624
+  Temperature 1600 K:
+    beta_average/beta_0: -0.33568903605168121
+    beta_1/beta_0: -0.33731169999752841
+  Temperature 1700 K:
+    beta_average/beta_0: -0.33568904223162854
+    beta_1/beta_0: -0.33731170626864332
+  Temperature 1800 K:
+    beta_average/beta_0: -0.33568904767228552
+    beta_1/beta_0: -0.33731171178711578
+  Temperature 1900 K:
+    beta_average/beta_0: -0.33568905269430671
+    beta_1/beta_0: -0.33731171687117312
+  Temperature 2000 K:
+    beta_average/beta_0: -0.33568905706786584
+    beta_1/beta_0: -0.33731172131353876
+
 Alloy: Fe60Ni20Cr20
 Composition: {'Fe': 60, 'Ni': 20, 'Cr': 20}
 Normalized SRO Parameters:

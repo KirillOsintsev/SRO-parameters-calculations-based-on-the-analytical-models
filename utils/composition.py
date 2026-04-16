@@ -26,7 +26,7 @@ def parse_composition_string(comp_string):
 # Load compositions from Excel
 def load_compositions_from_excel():
     path = input("Enter the path to the .xls file: ")
-    df = pd.read_excel(path, sheet_name="Properties & Parameters")
+    df = pd.read_excel(path, sheet_name="Alloy systems")
     compositions = df.iloc[0:, 0].tolist() # Skip the header
     return [parse_composition_string(comp) for comp in compositions if isinstance(comp, str)]
 

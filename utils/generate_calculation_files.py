@@ -3,30 +3,35 @@ import os
 import json
 from pathlib import Path
 
-def create_shell_script(pair_path, nn_type, config, pair):
+def create_shell_script(pair_path, nn_type, config, pair, python_executable='python3', potential_path=None):
     """Create the run_calculation shell script for a specific pair and nearest neighbor."""
+    if potential_path is None:
+        potential_path = str(Path('../../../../../../data/input/potentials/average_potentials') / f"{config['alloy_name']}.averaged.eam.alloy")
+
     script_template = '''#!/bin/bash
 # @Xin Liu, xin.liu@epfl.ch
 
 set -o nounset # Treat unset variables as an error
 
-python3 \\
+{python_executable} \\
     calculate_{nn}_S-S_interaction_by_pressure_relaxation.py \\
-    ../../../../../../data/input/potentials/average_potentials/{alloy_name}.averaged.eam.alloy \\
+    {potential_path} \\
     X {element1} {element2} {ncells} {lattice_constant} {potential_style} > log12.txt
 
-python3 \\
+{python_executable} \\
     calculate_{nn}_S-S_interaction_by_pressure_relaxation.py \\
-    ../../../../../../data/input/potentials/average_potentials/{alloy_name}.averaged.eam.alloy \\
+    {potential_path} \\
     X {element1} {element1} {ncells} {lattice_constant} {potential_style} > log11.txt
 
-python3 \\
+{python_executable} \\
     calculate_{nn}_S-S_interaction_by_pressure_relaxation.py \\
-    ../../../../../../data/input/potentials/average_potentials/{alloy_name}.averaged.eam.alloy \\
+    {potential_path} \\
     X {element2} {element2} {ncells} {lattice_constant} {potential_style} > log22.txt
 '''
 
     script_content = script_template.format(
+        python_executable=python_executable,
+        potential_path=potential_path,
         nn=nn_type,
         alloy_name=config['alloy_name'],
         element1=pair[0],
@@ -40,11 +45,11 @@ python3 \\
     
     with open(script_path, 'w') as f:
         f.write(script_content)
-        
-    return script_path
     
     # Make the script executable
     os.chmod(script_path, 0o755)
+    
+    return script_path
 
 def create_python_script(pair_path, nn_type, config):
     """Create the Python calculation script for a specific pair and nearest neighbor."""

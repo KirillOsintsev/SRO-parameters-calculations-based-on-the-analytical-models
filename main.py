@@ -1,8 +1,24 @@
+import sys
 import utils
 import calculators
 from pathlib import Path
 import subprocess
 import json
+
+def check_calculation_dependencies():
+    missing = []
+    for pkg in ['scipy', 'mpi4py', 'lammps']:
+        try:
+            __import__(pkg)
+        except ImportError:
+            missing.append(pkg)
+    if missing:
+        raise RuntimeError(
+            'Missing Python dependencies required for calculation scripts: '
+            + ', '.join(missing)
+            + '. Install them in the same environment used to run this program.'
+        )
+
 
 def process_composition(composition, database_path, lattice_constant, temperatures, phase, nn_list, ncells, alloy_system, recalculate=True):
     """
@@ -36,18 +52,24 @@ def process_composition(composition, database_path, lattice_constant, temperatur
         # Create pairs and folder structure
         pairs = utils.create_folder_structure(alloy_path, components, nn_list)
         
+        # Validate Python dependencies required for generated calculation scripts
+        check_calculation_dependencies()
+
         # Generate average potential
         potentials_dir = Path('./data/input/potentials/eam')
         eam_potential_path, kind = utils.find_potential(components, potentials_dir)
+        averaged_potential_path = Path('./data/input/potentials/average_potentials') / f'{alloy_name}.averaged.eam.alloy'
         utils.generate_averaged_potential(concentrations, eam_potential_path, kind, components, alloy_name)
-        
+        print('Energy minimization using molecular dynamics')
+
         # Configuration
         config = {
             "alloy_name": alloy_name, "composition": composition, "concentrations": concentrations,
             "components": components, "number_of_components": number_of_components,
             "pairs": [list(pair) for pair in pairs], "nearest_neighbors": nn_list,
             "lattice_constant": lattice_constant, "ncells": ncells, "phase": phase,
-            "potential_style": kind
+            "potential_style": kind,
+            "averaged_potential_path": str(averaged_potential_path.resolve())
         }
         with open(alloy_path / f'{alloy_name}.json', 'w') as f:
             json.dump(config, f, indent=4)
@@ -60,14 +82,33 @@ def process_composition(composition, database_path, lattice_constant, temperatur
                 pair_name = ''.join(pair)
                 pair_path = alloy_path / pair_name
                 for nn in nn_list:
-                    script = utils.create_shell_script(pair_path, nn, config, pair)
+                    script = utils.create_shell_script(
+                        pair_path,
+                        nn,
+                        config,
+                        pair,
+                        sys.executable,
+                        config['averaged_potential_path']
+                    )
                     calculation_scripts.append(script)
                     utils.create_python_script(pair_path, nn, config)
             for script in calculation_scripts:
                 result_file = script.parent / 'log.lammps'
                 if not result_file.exists():
-                    subprocess.run(['bash', script.name], cwd=script.parent, check=True, capture_output=True, text=True)
+                    try:
+                        subprocess.run(['bash', script.name], cwd=script.parent, check=True, capture_output=True, text=True)
+                    except subprocess.CalledProcessError as exc:
+                        print(f"ERROR: Calculation script failed: {script}")
+                        if exc.stdout:
+                            print("stdout:")
+                            print(exc.stdout.strip())
+                        if exc.stderr:
+                            print("stderr:")
+                            print(exc.stderr.strip())
+                        raise
             calculators.calculate_epis(alloy_path, alloy_name, nn_list)
+        else:
+            print('Output files already exist')
         
         # Misfit volumes
         misfit_volume_file = alloy_path / f'{alloy_name}_misfit_volumes_results.txt'

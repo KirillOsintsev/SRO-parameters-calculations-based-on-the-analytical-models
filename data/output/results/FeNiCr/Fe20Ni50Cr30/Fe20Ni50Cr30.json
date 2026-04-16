@@ -36,5 +36,6 @@
     "lattice_constant": 3.52,
     "ncells": 5,
     "phase": "fcc",
-    "potential_style": "eam/alloy"
+    "potential_style": "eam/alloy",
+    "averaged_potential_path": "/media/sf_host/SRO-parameters-calculator/data/input/potentials/average_potentials/Fe20Ni50Cr30.averaged.eam.alloy"
 }

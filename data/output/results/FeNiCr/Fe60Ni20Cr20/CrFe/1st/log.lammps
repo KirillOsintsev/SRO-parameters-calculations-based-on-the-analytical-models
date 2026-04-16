@@ -30,9 +30,9 @@ Per MPI rank memory allocation (min/avg/max) = 4.57 | 4.57 | 4.57 Mbytes
          0   0             -2161.6093      6.3674328      0.2551761    
         25   0             -2161.6123      2.4113889e-05  2.0280543e-06
         27   0             -2161.6123     -1.6095286e-07  9.5804965e-07
-Loop time of 0.0751072 on 1 procs for 27 steps with 500 atoms
+Loop time of 0.0680179 on 1 procs for 27 steps with 500 atoms
 
-56.4% CPU use with 1 MPI tasks x 1 OpenMP threads
+97.9% CPU use with 1 MPI tasks x 1 OpenMP threads
 
 Minimization stats:
   Stopping criterion = force tolerance
@@ -46,12 +46,12 @@ Minimization stats:
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
 ---------------------------------------------------------------
-Pair    | 0.073527   | 0.073527   | 0.073527   |   0.0 | 97.90
+Pair    | 0.06666    | 0.06666    | 0.06666    |   0.0 | 98.00
 Neigh   | 0          | 0          | 0          |   0.0 |  0.00
-Comm    | 0.00077535 | 0.00077535 | 0.00077535 |   0.0 |  1.03
-Output  | 2.0843e-05 | 2.0843e-05 | 2.0843e-05 |   0.0 |  0.03
+Comm    | 0.00062448 | 0.00062448 | 0.00062448 |   0.0 |  0.92
+Output  | 2.1513e-05 | 2.1513e-05 | 2.1513e-05 |   0.0 |  0.03
 Modify  | 0          | 0          | 0          |   0.0 |  0.00
-Other   |            | 0.000784   |            |       |  1.04
+Other   |            | 0.0007121  |            |       |  1.05
 
 Nlocal:            500 ave         500 max         500 min
 Histogram: 1 0 0 0 0 0 0 0 0 0
@@ -71,9 +71,9 @@ Per MPI rank memory allocation (min/avg/max) = 3.445 | 3.445 | 3.445 Mbytes
    Step          Temp          PotEng         Press          Fnorm     
         27   0             -2161.6123     -1.6093207e-07  9.5804965e-07
         28   1.2089871e-15 -2161.6123     -1.6710471e-07  9.553326e-07 
-Loop time of 0.00446873 on 1 procs for 1 steps with 500 atoms
+Loop time of 0.00443541 on 1 procs for 1 steps with 500 atoms
 
-72.7% CPU use with 1 MPI tasks x 1 OpenMP threads
+99.9% CPU use with 1 MPI tasks x 1 OpenMP threads
 
 Minimization stats:
   Stopping criterion = force tolerance
@@ -87,12 +87,12 @@ Minimization stats:
 MPI task timing breakdown:
 Section |  min time  |  avg time  |  max time  |%varavg| %total
 ---------------------------------------------------------------
-Pair    | 0.0043889  | 0.0043889  | 0.0043889  |   0.0 | 98.21
+Pair    | 0.0043249  | 0.0043249  | 0.0043249  |   0.0 | 97.51
 Neigh   | 0          | 0          | 0          |   0.0 |  0.00
-Comm    | 3.7152e-05 | 3.7152e-05 | 3.7152e-05 |   0.0 |  0.83
+Comm    | 5.707e-05  | 5.707e-05  | 5.707e-05  |   0.0 |  1.29
 Output  | 0          | 0          | 0          |   0.0 |  0.00
 Modify  | 0          | 0          | 0          |   0.0 |  0.00
-Other   |            | 4.265e-05  |            |       |  0.95
+Other   |            | 5.343e-05  |            |       |  1.20
 
 Nlocal:            500 ave         500 max         500 min
 Histogram: 1 0 0 0 0 0 0 0 0 0

@@ -224,13 +224,13 @@ def ternary_sro_pair(fugacity_results, concentrations, components, probabilities
                 try:
                     with open(probabilities_output_file, 'w') as f:
                         json.dump(all_probabilities, f, indent=4)
-                        print(f"Probabilities saved to {probabilities_output_file}")
+                        #print(f"Probabilities saved to {probabilities_output_file}")
                 except IOError as e:
                     print(f"Error writing probabilities file: {e}")
             
             # Optional: Print result summary
-            print(f"T={T}K, {neighbor}: alpha_{components[0]}{components[1]}={a01:.4f}, "
-                  f"alpha_{components[0]}{components[2]}={a02:.4f}, alpha_{components[1]}{components[2]}={a12:.4f}")
+            #print(f"T={T}K, {neighbor}: alpha_{components[0]}{components[1]}={a01:.4f}, "
+                  #f"alpha_{components[0]}{components[2]}={a02:.4f}, alpha_{components[1]}{components[2]}={a12:.4f}")
 
     return alpha_values
 

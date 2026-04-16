@@ -4,7 +4,17 @@
 
 This computational framework performs systematic screening of multi-component alloy compositions to calculate and analyze Short-Range Order (SRO) parameters, Effective Pair Interactions (EPIs), misfit volumes, and normalized SRO parameters. The system integrates molecular dynamics simulations (via LAMMPS) with statistical thermodynamics to predict ordering behavior in complex alloys across a range of temperatures.
 
-## Implementation
+## Usage
+1. Ensure input files exist:
+   - `data/input/database.json`
+   - 'data/input/{name-of-your-excel-file}.xls # Note: only .xls file format is currently supported
+   - EAM potential in `data/input/potentials/eam/`
+2. Run the interactive CLI:
+
+```bash
+python main_screening.py
+```
+
 Open terminal and run
 ```
 python main.py
@@ -15,19 +25,23 @@ The command line interface will be run.
 
 Once the script starts, you will be prompted to provide the following information step-by-step:
 
-Operation Mode: Choose whether to perform a fresh simulation or load cached data.
+**Operation Mode**: Choose whether to perform a fresh simulation or load cached data.
 
-1: Calculate new — Runs the full SRO parameter simulation.
+1. **Calculate new**: Runs the full SRO parameter simulation.
 
-2: Load from existing files — Processes data from previously generated results in the ./data/output/ directory.
+2. **Load from existing files**: Processes data from previously generated results in the ./data/output/ directory.
 
-**Alloy System**: Enter the name of the system (e.g., FeCrNi). This name is used to organize output folders.
+3. **Alloy System**: Enter the name of the alloy system (e.g., `FeNiCr`).
 
-**Phase & Structure**: Follow the prompts to specify the crystallographic phase (suppors only FCC or BCC), nearest neighbors (NN) list (only 1st NN is supported now), and the number of cells for the simulation (5 is used by default).
+4. **Crystal Phase**: Select `fcc` or `bcc`.
 
-**Lattice Constant (New Calculation only)**: Provide the lattice constant (in Å) to be applied across all compositions.
+5. **Nearest Neighbors**: Specify number of shells to calculate (1-4). However, currently is implemented only the 1st NN.
 
-**Composition Input**: The script will attempt to load specific alloy compositions from an Excel file. Copy and paste the link to your .xls file in the command line. An example of the .xls file is provided in the ./data/input/FeNiCr.xls. The script supports consequent run for the multiple alloy systems written in the first column of the .xls file.
+6. **Unit Cells**: Number of unit cells for LAMMPS simulations (default: 5). The more the unit cells the higher the computational cost.
+
+7. **Lattice Constant**: (Mode 1 only) Enter lattice constant value in (Å) which will be used for the molecular dynamics energy minimization for all compositions.
+
+7. **Composition Input**: (Mode 1 only) Provide path to Excel file with compositions. Copy and paste the link to your .xls file in the command line. An example of the .xls file is provided in the ./data/input/FeNiCr.xls. The script supports consequent run for the multiple alloy systems written in the first column of the .xls file.
 
 **Configuration**: Temperature Range
 
@@ -89,27 +103,14 @@ Project/
                     └── all_alloys_normalized_sro_report.txt # Summary report
 ```
 
-
-## Quickstart (minimal)
-
-1. Ensure inputs exist:
-   - `data/input/database.json`
-   - EAM potentials in `data/input/potentials/eam/`
-2. Run the interactive CLI:
-
-```bash
-python main_screening.py
-```
-
 ## Methodology
 
 ### 1. Composition Processing
 
-The system accepts alloy compositions either:
-- **Interactive input**: Manual entry of element concentrations
+The system accepts alloy compositions from the Excel file:
 - **Excel file input**: Batch processing from `.xls` files containing composition data
 
-Compositions are parsed and normalized, generating:
+Compositions are parsed generating:
 - Alloy name (e.g., `Fe56Ni23Cr21`)
 - Component list and concentrations
 - Number of components and unique pairs
@@ -192,31 +193,6 @@ The system generates comprehensive reports:
 - **Summary report**: Aggregated results across all alloys in the system (`all_alloys_normalized_sro_report.txt`)
 - Reports include normalized SRO parameters, condition satisfaction flags, and temperature-dependent behavior
 
-## Usage
-
-### Basic Execution
-
-```bash
-python main.py
-```
-
-### Interactive Workflow
-
-1. **Mode Selection**:
-   - `1`: Calculate new compositions (full calculation pipeline)
-   - `2`: Load from existing files (post-processing/reporting)
-
-2. **Alloy System**: Enter the name of the alloy system (e.g., `FeNiCr`)
-
-3. **Crystal Phase**: Select `fcc` or `bcc`
-
-4. **Nearest Neighbors**: Specify number of shells to calculate (1-4). However, currently is implemented only the 1st NN.
-
-5. **Unit Cells**: Number of unit cells for LAMMPS simulations (default: 5). The more the unit cells the higher the computational cost.
-
-6. **Lattice Constant**: (Mode 1 only) Enter lattice constant value for all compositions
-
-7. **Composition Input**: (Mode 1 only) Provide path to Excel file with compositions
 
 ### Output Files
 

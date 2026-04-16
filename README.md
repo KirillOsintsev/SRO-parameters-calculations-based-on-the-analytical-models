@@ -1,4 +1,4 @@
-# Calculator of Short-Range Order (SRO) Parameters based on the analytical models
+# Short-Range Order (SRO) Parameters calculator based on the analytical models
 
 ## Overview
 

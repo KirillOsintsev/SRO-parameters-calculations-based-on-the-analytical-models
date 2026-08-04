@@ -151,9 +151,9 @@ def ternary_sro_pair(fugacity_results, concentrations, components, probabilities
         x12 = x_mat_current[comp_indices[1], comp_indices[2]]
 
         # Probability relation equations
-        f[0] = (p_vals[0] * p_vals[3]) / (p_vals[1]**2) - 1/(4 * x01) 
-        f[1] = (p_vals[0] * p_vals[5]) / (p_vals[2]**2) - 1/(4 * x02) 
-        f[2] = (p_vals[3] * p_vals[5]) / (p_vals[4]**2) - 1/(4 * x12) 
+        f[0] = (p_vals[0] * p_vals[3]) / (p_vals[1]**2) - 1/4 * x01 
+        f[1] = (p_vals[0] * p_vals[5]) / (p_vals[2]**2) - 1/4 * x02 
+        f[2] = (p_vals[3] * p_vals[5]) / (p_vals[4]**2) - 1/4 * x12 
 
         # Mass Balance Equations
         f[3] = 2 * p_vals[0] + p_vals[1] + p_vals[2] - (2 * c0)

@@ -4,6 +4,10 @@
 
 This computational framework calculates Short-Range Order (SRO) parameters, Effective Pair Interactions (EPIs), misfit volumes, and normalized SRO parameters in metallic systems containing 2 to 6 elements. The framework integrates molecular dynamics (MD) simulations (via LAMMPS) with analytical models based on the theories of Y. Rao and W. Curtin (DOI: 10.1016/j.actamat.2022.117621) and S. Nag and W. Curtin (DOI: 10.1016/j.actamat.2023.119472) to efficiently predict the SRO parameters of complex alloys across a wide range of temperatures.
 
+## Examples
+The results of SRO parameter calculations are demonstrated for Fe-Ni-Cr FCC alloys.
+Examples of input and output files are located in the 'data' folder
+
 ## Usage
 1. Ensure input files exist:
    - `data/input/database.json`

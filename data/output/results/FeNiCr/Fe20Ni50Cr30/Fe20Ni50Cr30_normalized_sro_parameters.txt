@@ -1,76 +1,76 @@
 Temperature 300 K
 beta_average/beta_0: 0.0
-beta_1/beta_0: -0.09438282414789938
+beta_1/beta_0: 0.09444348728749746
 
 Temperature 400 K
 beta_average/beta_0: 0.0
-beta_1/beta_0: -0.07103932634815756
+beta_1/beta_0: 0.07106781522553414
 
 Temperature 500 K
 beta_average/beta_0: 0.0
-beta_1/beta_0: -0.05692521749717918
+beta_1/beta_0: 0.05694177701224562
 
 Temperature 600 K
 beta_average/beta_0: 0.0
-beta_1/beta_0: -0.04748026693757432
+beta_1/beta_0: 0.0474911349299697
 
 Temperature 700 K
 beta_average/beta_0: 0.0
-beta_1/beta_0: -0.040719455056150114
+beta_1/beta_0: 0.040727159346074
 
 Temperature 773 K
 beta_average/beta_0: 0.0
-beta_1/beta_0: -0.036884017005750024
+beta_1/beta_0: 0.03689022030119227
 
 Temperature 800 K
 beta_average/beta_0: 0.0
-beta_1/beta_0: -0.035642107266097484
+beta_1/beta_0: 0.035647866552368
 
 Temperature 900 K
 beta_average/beta_0: 0.0
-beta_1/beta_0: -0.03168956876787901
+beta_1/beta_0: 0.03169404382242238
 
 Temperature 1000 K
 beta_average/beta_0: 0.0
-beta_1/beta_0: -0.02852558359900501
+beta_1/beta_0: 0.028529164645637536
 
 Temperature 1100 K
 beta_average/beta_0: 0.0
-beta_1/beta_0: -0.02593570481970636
+beta_1/beta_0: 0.02593863761000276
 
 Temperature 1200 K
 beta_average/beta_0: 0.0
-beta_1/beta_0: -0.023776744445292174
+beta_1/beta_0: 0.023779191707249046
 
 Temperature 1273 K
 beta_average/beta_0: 0.0
-beta_1/beta_0: -0.022414572014217326
+beta_1/beta_0: 0.022416737745055374
 
 Temperature 1400 K
 beta_average/beta_0: 0.0
-beta_1/beta_0: -0.02038289101400641
+beta_1/beta_0: 0.020384671467844315
 
 Temperature 1500 K
 beta_average/beta_0: 0.0
-beta_1/beta_0: -0.01902497806139148
+beta_1/beta_0: 0.01902652339923282
 
 Temperature 1600 K
 beta_average/beta_0: 0.0
-beta_1/beta_0: -0.017836645383423493
+beta_1/beta_0: 0.017837999970211967
 
 Temperature 1700 K
 beta_average/beta_0: 0.0
-beta_1/beta_0: -0.016788001888146754
+beta_1/beta_0: 0.016789198558364908
 
 Temperature 1800 K
 beta_average/beta_0: 0.0
-beta_1/beta_0: -0.015855788381480433
+beta_1/beta_0: 0.015856853616067652
 
 Temperature 1900 K
 beta_average/beta_0: 0.0
-beta_1/beta_0: -0.01502163725337151
+beta_1/beta_0: 0.015022592393990623
 
 Temperature 2000 K
 beta_average/beta_0: 0.0
-beta_1/beta_0: -0.014270853259452784
+beta_1/beta_0: 0.014271713131091348
 
